@@ -1,0 +1,121 @@
+// Color support for .navbar-dark
+
+#mainNav.navbar-dark {
+  .navbar-collapse {
+    .navbar-sidenav {
+      .nav-link-collapse:after {
+        color: $white;
+      }
+      > .nav-item {
+        > .nav-link {
+		  color: $white;
+		  &.active {
+            color: $greyed-blue;
+		  }
+          &:hover {
+            color: $gray-400;
+          }
+        }
+        .sidenav-second-level,
+        .sidenav-third-level {
+          > li > a {
+			color: $white;
+			&.active {
+				color: $greyed-blue;
+			}
+            &:hover {
+              color: $gray-400;
+            }
+          }
+        }
+      }
+    }
+    .navbar-nav > .nav-item.dropdown > .nav-link:after {
+      color: $white;
+    }
+  }
+  @media (min-width: 992px) {
+    .navbar-collapse {
+      .navbar-sidenav {
+        background: linear-gradient(to bottom, $cool-gradient-color-1, $cool-gradient-color-2);
+		padding-top: 10px;
+        li {
+          &.active {
+            a {
+              color: white !important;
+              background-color: $gray-800;
+              &:focus,
+              &:hover {
+                color: white;
+              }
+            }
+          }
+        }
+        > .nav-item {
+          .sidenav-second-level,
+          .sidenav-third-level {
+            background: $gray-800;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Color support for .navbar-light
+
+#mainNav.navbar-light {
+  .navbar-collapse {
+    .navbar-sidenav {
+      .nav-link-collapse:after {
+        color: fade-out($black, 0.5);
+      }
+      > .nav-item {
+        > .nav-link {
+          color: fade-out($black, 0.5);
+          &:hover {
+            color: fade-out($black, 0.3);
+          }
+        }
+        .sidenav-second-level,
+        .sidenav-third-level {
+          > li > a {
+            color: fade-out($black, 0.5);
+            &:focus,
+            &:hover {
+              color: fade-out($black, 0.3);
+            }
+          }
+        }
+      }
+    }
+    .navbar-nav > .nav-item.dropdown > .nav-link:after {
+      color: fade-out($black, 0.5);
+    }
+  }
+  @media (min-width: 992px) {
+    .navbar-collapse {
+      .navbar-sidenav {
+        background: $gray-100;
+        li {
+          &.active {
+            a {
+              color: $black !important;
+              background-color: $gray-200;
+              &:focus,
+              &:hover {
+                color: $black;
+              }
+            }
+          }
+        }
+        > .nav-item {
+          .sidenav-second-level,
+          .sidenav-third-level {
+            background: $gray-100;
+          }
+        }
+      }
+    }
+  }
+}
