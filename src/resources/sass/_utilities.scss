@@ -16,3 +16,8 @@
 .z-1 {
   z-index: 1;
 }
+
+.full-page-height
+{
+    height: calc(100vh - 62px - 62px);
+}

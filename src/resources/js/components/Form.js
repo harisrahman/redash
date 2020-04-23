@@ -33,6 +33,11 @@ function Form(props)
 		axios.post(props.url, data)
 			.then(function (response)
 			{
+				if (response.data == "S" || response.data == "F")
+				{
+					console.log("DSK");
+					props.alert(response.data);
+				}
 				console.log(response);
 			})
 			.catch(function (error)

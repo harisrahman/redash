@@ -3,12 +3,12 @@ import React from 'react';
 function Alert(props)
 {
 	const msg = props.msg
-				? props.msg
-				: (
-					props.type === "S"
-					? (<span><strong>Success!</strong> Changes saved.</span>)
-					: (<span><strong>Error!</strong> Changes could not be saved.</span>)
-				);
+		? props.msg
+		: (
+			props.type === "S"
+				? (<span><strong>Success!</strong> Changes saved.</span>)
+				: (<span><strong>Error!</strong> Changes could not be saved.</span>)
+		);
 
 	return (
 		<div className="row justify-content-center">

@@ -23,6 +23,8 @@ Route::namespace('API')->name('api.')->group(function ()
 			
 			Route::patch('password', 'PasswordController@update')->name('password.update');
 
+			Route::get('account-details', 'AccountDetailsController@show')->name('account-details.show');
+
 			Route::patch('account-details', 'AccountDetailsController@update')->name('account-details.update');
 
 	// Route::resource('password', 'AccountSettingController');

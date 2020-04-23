@@ -14,6 +14,7 @@ class UserSeeder extends Seeder
     	DB::table('users')->insert([
     	    'name' => 'Haris Rahman',
             'email' => 'hi@haris.tech',
+            'mobile' => '9504723345',
     	    'password' => '$2y$10$koGNDlnvLiJHSDl19nOX9urbMlIr8h2r5CwRCQ5GvIJjOjbzpWOrS', //pass = 111111
     	    'created_at' => '2019-11-30 00:42:18',
     	    'updated_at' => '2019-11-30 00:42:18',
