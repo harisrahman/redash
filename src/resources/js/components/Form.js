@@ -35,10 +35,8 @@ function Form(props)
 			{
 				if (response.data == "S" || response.data == "F")
 				{
-					console.log("DSK");
 					props.alert(response.data);
 				}
-				console.log(response);
 			})
 			.catch(function (error)
 			{

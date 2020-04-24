@@ -9,6 +9,7 @@ import NumInput from '../components/NumInput';
 import PassInput from '../components/PassInput';
 import Card from '../components/Card';
 import Form from '../components/Form';
+import Expire from '../components/Expire';
 import { setObjValue } from '../scripts/helpers';
 
 function AccountSettings(props)
@@ -44,7 +45,6 @@ function AccountSettings(props)
 	const setSubmitStateHandler = (msg) => 
 	{
 		setSubmitState(msg);
-		console.log(msg);
 	}
 
 	useEffect(() =>
@@ -70,7 +70,9 @@ function AccountSettings(props)
 					: (
 						<Root>
 							{submitState &&
-								<Alert type="S" size="col-md-10" />
+								<Expire delay="2000">
+									<Alert type={submitState} size="col-md-10" />
+								</Expire>
 							}
 							<Card title="Account Details" icon="fas fa-user-circle" size="col-md-10">
 								<FormContext.Provider value={{ formState, setFormState }}>
